@@ -9,8 +9,9 @@ namespace :dev do
     show_spinner("Creating Database...") {%x(rails db:create)}
 
     show_spinner("Migrating Database...") {%x(rails db:migrate)}
-    %x(rails dev:add_coins)
     %x(rails dev:add_mining_types)
+    %x(rails dev:add_coins)
+    
 
 
     else
@@ -27,17 +28,20 @@ namespace :dev do
             {
             description: "bitcoin",
             acronym: "BTC",
-            url_image: "https://w7.pngwing.com/pngs/232/592/png-transparent-btc-crypto-cryptocurrency-cryptocurrencies-cash-money-bank-payment-icon.png",    
+            url_image: "https://w7.pngwing.com/pngs/232/592/png-transparent-btc-crypto-cryptocurrency-cryptocurrencies-cash-money-bank-payment-icon.png",
+            mining_type: MiningType.first,
             },
             {
             description: "Etherum",
             acronym: "ETH",
             url_image: "https://img1.gratispng.com/20180516/ouw/kisspng-ethereum-cryptocurrency-blockchain-logo-eos-io-crypto-5afc9ab9b20d86.8643914515265041217293.jpg",    
+            mining_type: MiningType.find_by(acronym: "PoS"),
             },
             {
             description: "Dash",
             acronym: "DASH",
             url_image: "https://cdn4.iconfinder.com/data/icons/crypto-currency-and-coin-2/256/dash_dashcoin-512.png",    
+            mining_type: MiningType.all.sample,    
             }
           ]
     )
