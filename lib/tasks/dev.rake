@@ -10,6 +10,7 @@ namespace :dev do
 
     show_spinner("Migrating Database...") {%x(rails db:migrate)}
     %x(rails dev:add_coins)
+    %x(rails dev:add_mining_types)
 
 
     else
@@ -46,6 +47,22 @@ namespace :dev do
        Coin.find_or_create_by!(coin)
  end
 end
+end
+
+desc "registration of types of mining"
+task add_mining_types: :environment do
+  show_spinner("registering types of mining...")  do
+  mining_types = [
+    {description: "Proof of Work", acronym: "PoN"},
+    {description: "Proof of Stake", acronym: "PoS"},
+    {description: "Proof of Capacity", acronym: "PoC"}
+  ]
+
+mining_types.each do |mining_type|
+  sleep(1)
+  MiningType.find_or_create_by!(mining_type)
+end
+end 
 end
 
   private
