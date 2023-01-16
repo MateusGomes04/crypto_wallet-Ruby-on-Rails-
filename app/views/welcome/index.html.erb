@@ -1,13 +1,11 @@
-<p>
-<%= link_to "Idioma Portugues", "/?locale-pt-BR" %></p>
+<p><%= link_to 'Português', root_path(locale: 'pt-BR')%></p>
 
-<p>
-<%= link_to "English", "/?locale-pt-BR" %></p>
+<p><%=link_to 'Inglês', root_path(locale: 'en')%></p>
 
 <h1>Welcome!</h1>
 <p>The language used in this application is: <strong><%= locale(I18n.locale) %></strong> </p>
-<p> <strong> Today is: </strong> <%= I18n.l(Date.today) %> </p>
-<p><%= I18n.t('hello')%></p>
+<p> <strong> Today is: </strong> <%= l(Date.today) %> </p>
+<p><%= t('hello')%></p>
 
 <%= render "menu" %>
 
