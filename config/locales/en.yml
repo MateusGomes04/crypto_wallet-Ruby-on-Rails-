@@ -29,7 +29,8 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.orgl"
 en:
-  actual_locale: "português do Brasil"
+  current_locale: "português do Brasil"
+  welcome: "Welcome"
   hello: "Hello world"
   links:
     edit: "Edit"

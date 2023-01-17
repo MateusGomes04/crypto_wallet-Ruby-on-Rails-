@@ -1,21 +1,14 @@
-<p><%= link_to 'Português', root_path(locale: 'pt-BR')%></p>
-
-<p><%=link_to 'Inglês', root_path(locale: 'en')%></p>
-
-<h1>Welcome!</h1>
-<p>The language used in this application is: <strong><%= locale(I18n.locale) %></strong> </p>
-<p> <strong> Today is: </strong> <%= l(Date.today) %> </p>
-<p><%= t('hello')%></p>
-
-<%= render "menu" %>
-
-<p> You are in mode <strong><%= ambiente_rails %></strong> </p>
-
-<p>My name is <%= @my_name %> </p>
-<p> I am studying <%= @course %> </p>
- 
-
-
+<div class="card" style="width: 50rem; left: 25%;" >
+    <div class="card-body">
+      <h1 class="card-title">welcome </h1>
+         <p class="card-text">this is Crypto Wallet, an app for you to register and track your cryptocurrencies</p>
+         <hr/>
+         <p>to get started, click on the options below</p>
+         <p class="lead">
+         <%= render "menu" %>
+         </p>
+    </div>
+</div>
 
 
 

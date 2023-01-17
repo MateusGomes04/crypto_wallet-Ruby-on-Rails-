@@ -1,5 +1,6 @@
 pt-BR:
-  actual_locale: "português do Brasil"
+  current_locale: "português do Brasil"
+  welcome: "Seja Bem Vindo!!"
   hello: "Olá mundo"
   links:
     edit: "Editar"
