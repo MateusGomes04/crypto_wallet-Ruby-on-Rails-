@@ -1,9 +1,9 @@
 <div class="card" style="width: 50rem; left: 25%;" >
     <div class="card-body">
-      <h1 class="card-title">welcome </h1>
-         <p class="card-text">this is Crypto Wallet, an app for you to register and track your cryptocurrencies</p>
+      <h1 class="card-title"> <%= t('welcome') %></h1>
+         <p class="card-text"> <%= t('message.welcome') %></p>
          <hr/>
-         <p>to get started, click on the options below</p>
+         <p><%= t('message.menu')%></p>
          <p class="lead">
          <%= render "menu" %>
          </p>
